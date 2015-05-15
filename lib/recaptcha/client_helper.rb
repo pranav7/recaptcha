@@ -72,7 +72,7 @@ module Recaptcha
       v2_options = options.slice(:theme, :type, :callback).map {|k,v| %{data-#{k}="#{v}"} }.join(" ")
 
       html = ""
-      html << %{<script src="#{uri}" async defer></script>\n}
+      html << %{<script src="https://www.google.com/recaptcha/api.js" async defer></script>\n}
       html << %{<div class="g-recaptcha" data-sitekey="#{key}" #{v2_options}></div>\n}
     
       unless options[:noscript] == false
